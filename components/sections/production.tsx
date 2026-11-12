@@ -8,7 +8,7 @@ export function ProductionSection() {
   const colors = [armColor.lear, armColor.single, palette.ink];
   return (
     <Section id="production" num="08" title="Production model: Kimi K3.1 Pro">
-      <p className="lede">Lear on Kimi was measured on the 24 fresh cases with one repeat and reasoning set to low.</p>
+      <p className="lede">We ran Lear on Kimi: the 24 fresh cases, one repeat, reasoning set to low.</p>
       <Figure
         no="8.1"
         title="Fresh set, correct answers with 95% intervals"
@@ -35,7 +35,7 @@ export function ProductionSection() {
         <p>
           On the 24 fresh cases (1 repeat, reasoning low) Lear on Kimi scored <strong>92% [79, 100]</strong> at $0.0089 per incident, 5.2× the DeepSeek cost, with no measured accuracy gain over DeepSeek (96% [88, 100]).
         </p>
-        <p>Worth testing a DeepSeek-first, Kimi-on-escalation routing; one repeat is a hint, not a result.</p>
+        <p>A DeepSeek-first setup that escalates to Kimi is worth testing. One repeat is a hint, not a result.</p>
       </div>
     </Section>
   );
