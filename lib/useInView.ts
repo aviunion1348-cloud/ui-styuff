@@ -3,9 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 
 /**
- * Flips to `true` the first time the element scrolls into view, then stops
- * observing. Used to play entrance animations once. Falls back to `true`
- * where IntersectionObserver is unavailable or motion is reduced.
+ * Turns `true` once the element first enters the viewport, then disconnects.
+ * Charts use this to play their entrance once. Reduced motion and missing
+ * IntersectionObserver resolve immediately.
  */
 export function useInView<T extends Element = HTMLDivElement>(threshold = 0.2) {
   const ref = useRef<T>(null);
@@ -26,7 +26,7 @@ export function useInView<T extends Element = HTMLDivElement>(threshold = 0.2) {
           io.disconnect();
         }
       },
-      { threshold, rootMargin: "0px 0px -6% 0px" },
+      { threshold, rootMargin: "0px 0px -8% 0px" },
     );
     io.observe(el);
     return () => io.disconnect();

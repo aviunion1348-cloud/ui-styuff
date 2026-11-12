@@ -1,27 +1,27 @@
 import type { ReactNode } from "react";
 
-/** Plain, accessible table used beside every chart so no number is chart-only. */
-export function DataTable({
+/** Plain ruled table. Every figure in the report that is not charted lives here. */
+export function Ledger({
   caption,
-  headers,
+  head,
   rows,
   numeric = [],
-  highlightRow,
+  highlight = [],
 }: {
   caption?: string;
-  headers: string[];
+  head: string[];
   rows: ReactNode[][];
   numeric?: number[];
-  highlightRow?: number;
+  highlight?: number[];
 }) {
   return (
-    <div className="table-wrap">
-      <table className="data-table">
+    <div className="ledger">
+      <table>
         {caption ? <caption>{caption}</caption> : null}
         <thead>
           <tr>
-            {headers.map((h, i) => (
-              <th key={h + i} scope="col" className={numeric.includes(i) ? "num" : ""}>
+            {head.map((h, i) => (
+              <th key={i} scope="col" className={numeric.includes(i) ? "num" : undefined}>
                 {h}
               </th>
             ))}
@@ -29,9 +29,9 @@ export function DataTable({
         </thead>
         <tbody>
           {rows.map((r, ri) => (
-            <tr key={ri} className={highlightRow === ri ? "is-hl" : ""}>
+            <tr key={ri} className={highlight.includes(ri) ? "is-hl" : undefined}>
               {r.map((c, ci) => (
-                <td key={ci} className={numeric.includes(ci) ? "num" : ""}>
+                <td key={ci} className={numeric.includes(ci) ? "num" : undefined}>
                   {c}
                 </td>
               ))}
