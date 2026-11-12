@@ -7,8 +7,8 @@ import { linear } from "@/lib/scale";
 import { fonts, palette } from "@/lib/theme";
 
 const FILL: Record<CauseKey, string> = {
-  abstain: palette.violetDeep,
-  refused: palette.violetMid,
+  abstain: palette.pinkDeep,
+  refused: palette.pink,
   right: palette.silver,
   wrong: palette.silverMid,
   unsupported: palette.graphite,

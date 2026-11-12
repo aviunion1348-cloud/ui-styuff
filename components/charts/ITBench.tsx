@@ -43,7 +43,7 @@ export function ITBench() {
             <g style={fade(inView, i * 200 + 400)}>
               <circle cx={x(r.single)} cy={y} r={7} fill={armColor.single} />
               <circle cx={x(r.lear)} cy={y} r={7} fill={armColor.lear} />
-              <text x={x(r.lear)} y={y - 14} textAnchor="middle" fontSize="13" fontFamily={fonts.mono} fill={palette.violet}>
+              <text x={x(r.lear)} y={y - 14} textAnchor="middle" fontSize="13" fontFamily={fonts.mono} fill={palette.gold}>
                 {r.lear}
               </text>
               <text x={x(r.single)} y={y + 24} textAnchor="middle" fontSize="13" fontFamily={fonts.mono} fill={palette.ink2}>

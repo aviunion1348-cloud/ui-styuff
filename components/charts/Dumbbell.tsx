@@ -80,7 +80,7 @@ export function Dumbbell({
         return (
           <g key={r.id}>
             <title>{`${r.label}: ${r.from} → ${r.to}`}</title>
-            <text x={M.l - 22} y={y - 2} textAnchor="end" fontSize="14" fontWeight={600} fill={r.highlight ? palette.violet : palette.ink}>
+            <text x={M.l - 22} y={y - 2} textAnchor="end" fontSize="14" fontWeight={600} fill={r.highlight ? palette.gold : palette.ink}>
               {r.label}
             </text>
             {r.sub ? (
