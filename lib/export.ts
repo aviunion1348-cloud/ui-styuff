@@ -22,6 +22,9 @@ function serialise(svg: SVGSVGElement) {
   bg.setAttribute("height", "100%");
   bg.setAttribute("fill", palette.panel);
   clone.insertBefore(bg, clone.firstChild);
+  // Gradient paints are referenced by id; carry their definitions into the file.
+  const defs = document.getElementById("grad-defs");
+  if (defs) clone.insertBefore(defs.cloneNode(true), clone.firstChild);
   const xml = new XMLSerializer().serializeToString(clone);
   return { xml, width, height };
 }
