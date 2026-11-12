@@ -58,7 +58,7 @@ export function ITBench() {
         COST PER SCENARIO, USD
       </text>
       {[
-        { label: "Lear", v: ITBENCH.costPerScenario.lear, c: armColor.lear, text: "$0.0049", y: M.t + 240 },
+        { label: "Lear", v: ITBENCH.costPerScenario.lear, c: "url(#grad-lear)", text: "$0.0049", y: M.t + 240 },
         { label: "Single-agent", v: ITBENCH.costPerScenario.single, c: armColor.single, text: "≈ $0.0096", y: M.t + 282 },
       ].map((r) => (
         <g key={r.label}>

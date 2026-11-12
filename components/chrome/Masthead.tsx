@@ -7,7 +7,7 @@ export function Masthead() {
     <header id="top" className="mast">
       <p className="mast__kicker">Benchmark report · 12 November 2026 · Protocol v1.5</p>
       <h1 className="mast__title">
-        Lear diagnosis engine:
+        <span className="mast__hl">Lear</span> diagnosis engine:
         <br />
         accuracy, cost and competitive position
       </h1>

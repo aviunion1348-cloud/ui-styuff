@@ -67,7 +67,7 @@ export function Rail() {
         ))}
       </ol>
       <div className="rail__track" aria-hidden="true">
-        <div className="rail__fill" style={{ transform: `scaleY(${progress})` }} />
+        <div className="rail__fill" style={{ transform: `scaleX(${progress})` }} />
       </div>
       <a className="rail__pdf" href="/report/lear-benchmark-report.pdf" download>
         PDF ↓
