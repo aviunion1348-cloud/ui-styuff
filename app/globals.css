@@ -361,10 +361,10 @@ strong {
 }
 
 .sec__head {
-  display: grid;
-  grid-template-columns: 72px minmax(0, 1fr);
-  align-items: baseline;
-  margin-bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
 }
 
 .sec__num {
@@ -390,11 +390,10 @@ strong {
   letter-spacing: -0.01em;
   color: var(--ink);
   max-width: 46ch;
-  margin-left: 72px;
 }
 
 .prose {
-  margin-left: 72px;
+  max-width: 68ch;
 }
 
 .prose p {
@@ -842,15 +841,6 @@ h3.sub--first {
 /* ---------- Narrow screens -------------------------------------------------- */
 
 @media (max-width: 960px) {
-  .sec__head {
-    grid-template-columns: 48px minmax(0, 1fr);
-  }
-
-  .lede,
-  .prose {
-    margin-left: 0;
-  }
-
   .mast__figures {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     row-gap: 40px;
@@ -886,15 +876,6 @@ h3.sub--first {
 
   .mast__figures > div::before {
     right: 0;
-  }
-
-  .sec__head {
-    display: block;
-  }
-
-  .sec__num {
-    display: block;
-    margin-bottom: 10px;
   }
 
   .rail__brand span {

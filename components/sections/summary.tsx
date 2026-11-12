@@ -5,14 +5,14 @@ export function SummarySection() {
   return (
     <Section id="summary" num="01" title="Executive summary">
       <p className="lede">
-        Lear is the cheapest design tested. On identical code it ties a capable single agent on accuracy, and it changed observe-only components in 0% of scope-case runs.
+        Lear is the cheapest design we tested. On identical code it gets as many answers right as a capable single agent, and in scope-case runs it changed an observe-only component 0% of the time.
       </p>
       <dl className="claims">
         <div>
           <dt>Cost</dt>
           <dd>
             <p>
-              Lear&rsquo;s incident diagnosis costs <strong>$0.0016 per incident</strong> in model spend (DeepSeek V4.1 Flash at list price), i.e. <strong>$1.6 per 1,000 incidents</strong>. On identical code, model, evidence and cases, a single-agent tool loop costs <strong>1.6×</strong> as much as Lear (development set, v1.1 vs v1.1; 2.0× on the fresh set against the optimised Lear) and an investigators-plus-verifier design <strong>10.0×</strong>.
+              Lear costs <strong>$0.0016 per incident</strong> in model spend (DeepSeek V4.1 Flash at list price), i.e. <strong>$1.6 per 1,000 incidents</strong>. On identical code, model, evidence and cases, a single-agent tool loop costs <strong>1.6×</strong> as much as Lear (development set, v1.1 vs v1.1; 2.0× on the fresh set against the optimised Lear) and an investigators-plus-verifier design <strong>10.0×</strong>.
             </p>
             <p>
               In tokens, Lear uses 4.5× fewer than the single agent and 23× fewer than the multi-agent design. Lear alone is 3.1k tokens per incident after optimisation.
@@ -49,7 +49,7 @@ export function SummarySection() {
       </dl>
       <Note label="What this does not show">
         <p>
-          It does not show Lear is more accurate than a good single agent in a statistically firm way, and it does not compare Lear with any vendor&rsquo;s product. Competitors are represented by open implementations of their published designs.
+          It does not show Lear is more accurate than a good single agent. The gap is inside the noise. It also does not test any vendor&rsquo;s product: the competitors here are open implementations of published designs.
         </p>
       </Note>
       <Note label="Ratios across code versions">
