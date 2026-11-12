@@ -51,7 +51,7 @@ export function Scatter() {
       <text x={18} y={(M.t + H - M.b) / 2} textAnchor="middle" fontSize="12" fill={palette.ink3} transform={`rotate(-90 18 ${(M.t + H - M.b) / 2})`}>
         correct answers
       </text>
-      <text x={M.l + 12} y={H - M.b - 12} fontSize="12" fill={palette.violet} fontFamily={fonts.mono}>
+      <text x={M.l + 12} y={H - M.b - 12} fontSize="12" fill={palette.gold} fontFamily={fonts.mono}>
         ↖ cheaper and more accurate
       </text>
 

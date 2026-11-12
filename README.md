@@ -20,7 +20,8 @@ the page.
 - **Monthly spend** chart with a volume slider (100 to 100,000 incidents/month).
 - Reduced-motion support, keyboard focus styles, and a skip link.
 
-Palette: charcoal ground, silver type, and one violet accent used only for Lear.
+Palette: black ground, silver for text and baselines, gold for Lear, and pink for the
+failures the report counts (refusals, abstentions, unsafe changes). Nothing else is coloured.
 Typography: a serif for titles and ledes, a sans for text, and a mono for numbers.
 
 ## Layout

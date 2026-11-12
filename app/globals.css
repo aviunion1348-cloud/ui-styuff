@@ -1,21 +1,23 @@
 /* ==========================================================================
    Lear benchmark report
-   Charcoal ground, silver hierarchy, one violet accent (marks Lear).
-   Serif for titles and the lede; sans for text; mono for numbers and labels.
+   Black ground, silver for text and baselines, gold for Lear, pink for failures.
+   Serif for titles and ledes; sans for text; mono for numbers and small labels.
    ========================================================================== */
 
 :root {
-  --ground: #0c0c0e;
-  --panel: #121215;
-  --rule: #25252b;
-  --rule-strong: #3a3b43;
-  --ink: #eceef2;
-  --ink-2: #bcc0c9;
-  --ink-3: #8a909b;
-  --ink-4: #60656f;
-  --violet: #cbbcff;
-  --violet-mid: #9d82f7;
-  --violet-deep: #6e4fe3;
+  --ground: #0a0a0b;
+  --panel: #111113;
+  --rule: #25262b;
+  --rule-strong: #3b3d44;
+  --ink: #eef0f4;
+  --ink-2: #c3c7cf;
+  --ink-3: #8f949e;
+  --ink-4: #62666f;
+  --gold: #e2b35e;
+  --gold-mid: #c99a45;
+  --gold-deep: #8e6a2c;
+  --pink: #ec8db7;
+  --pink-deep: #b9577f;
   --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
@@ -44,7 +46,7 @@ body {
 }
 
 ::selection {
-  background: var(--violet-deep);
+  background: var(--gold-deep);
   color: var(--ink);
 }
 
@@ -68,14 +70,14 @@ p {
 }
 
 a {
-  color: var(--violet);
+  color: var(--gold);
   text-decoration: underline;
-  text-decoration-color: rgba(203, 188, 255, 0.35);
+  text-decoration-color: rgba(224, 178, 92, 0.35);
   text-underline-offset: 3px;
 }
 
 a:hover {
-  text-decoration-color: var(--violet);
+  text-decoration-color: var(--gold);
 }
 
 code {
@@ -93,7 +95,7 @@ strong {
 }
 
 :focus-visible {
-  outline: 1.5px solid var(--violet);
+  outline: 1.5px solid var(--gold);
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -175,11 +177,11 @@ strong {
 
 .rail__num {
   font: 11px var(--mono);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.01em;
 }
 
 .rail__list a.is-active .rail__num {
-  color: var(--violet);
+  color: var(--gold);
 }
 
 .rail__track {
@@ -194,7 +196,7 @@ strong {
 .rail__fill {
   width: 1px;
   height: 100%;
-  background: var(--violet-mid);
+  background: var(--gold-mid);
   transform-origin: top;
   transform: scaleY(0);
   transition: transform 0.15s linear;
@@ -203,13 +205,13 @@ strong {
 .rail__pdf {
   margin-top: auto;
   font: 12px var(--mono);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.01em;
   color: var(--ink-4);
   text-decoration: none;
 }
 
 .rail__pdf:hover {
-  color: var(--violet);
+  color: var(--gold);
 }
 
 .main {
@@ -226,8 +228,7 @@ strong {
 .mast__kicker {
   font: 12px var(--mono);
   letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-3);
+    color: var(--ink-3);
 }
 
 .mast__title {
@@ -249,43 +250,42 @@ strong {
 }
 
 .mast__figures {
-  margin: 64px 0 0;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 56px 0 0;
   border-top: 1px solid var(--rule-strong);
 }
 
 .mast__figures > div {
-  padding: 22px 22px 0 0;
-}
-
-.mast__figures > div + div {
-  padding-left: 22px;
-  border-left: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 13ch) minmax(0, 1.25fr);
+  align-items: baseline;
+  column-gap: 32px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--rule);
 }
 
 .mast__figures dt {
-  font: 11.5px/1.45 var(--sans);
+  font-size: 14px;
+  line-height: 1.5;
   color: var(--ink-3);
-  min-height: 3.1em;
 }
 
 .mast__figures dd:first-of-type {
-  margin: 10px 0 0;
-  font: 400 clamp(1.8rem, 1.2rem + 1.4vw, 2.5rem) / 1 var(--serif);
+  margin: 0;
+  font: 400 clamp(1.7rem, 1.2rem + 1.2vw, 2.3rem) / 1 var(--serif);
   letter-spacing: -0.02em;
+  font-variant-numeric: lining-nums tabular-nums;
   color: var(--ink);
 }
 
 .mast__figures > div:first-child dd:first-of-type {
-  color: var(--violet);
+  color: var(--gold);
 }
 
 .mast__sub {
-  margin-top: 10px;
-  font-size: 12.5px;
-  line-height: 1.5;
-  color: var(--ink-4);
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--ink-3);
 }
 
 /* ---------- Sections ------------------------------------------------------ */
@@ -307,7 +307,7 @@ strong {
 .sec__num {
   font: 12px var(--mono);
   color: var(--ink-4);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.01em;
   min-width: 2ch;
 }
 
@@ -346,11 +346,10 @@ strong {
 }
 
 h3.sub {
-  margin-top: 72px;
+  margin-top: 56px;
   font: 11.5px var(--mono);
   letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-3);
+    color: var(--ink-3);
 }
 
 h3.sub--first {
@@ -383,7 +382,7 @@ h3.sub--first {
   margin-right: 14px;
   font: 11.5px var(--mono);
   color: var(--ink-4);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.01em;
 }
 
 .fig__tools {
@@ -398,14 +397,14 @@ h3.sub--first {
   border: 0;
   background: none;
   font: 11px var(--mono);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.01em;
   color: var(--ink-4);
   cursor: pointer;
   transition: color 0.25s ease;
 }
 
 .fig__tools button:hover {
-  color: var(--violet);
+  color: var(--gold);
 }
 
 .fig__body svg {
@@ -447,9 +446,8 @@ h3.sub--first {
   text-align: left;
   padding-bottom: 12px;
   font: 11px var(--mono);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink-4);
+  letter-spacing: 0.01em;
+    color: var(--ink-4);
 }
 
 .ledger th,
@@ -457,9 +455,8 @@ h3.sub--first {
   padding: 0 12px 10px 0;
   border-bottom: 1px solid var(--rule-strong);
   font: 400 11px var(--mono);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-align: left;
+  letter-spacing: 0.01em;
+    text-align: left;
   color: var(--ink-4);
   vertical-align: bottom;
   white-space: nowrap;
@@ -493,11 +490,11 @@ h3.sub--first {
 .spend__table tr.is-hl th,
 .spend__table tr.is-hl td {
   color: var(--ink);
-  background: rgba(203, 188, 255, 0.045);
+  background: rgba(224, 178, 92, 0.045);
 }
 
 .ledger tr.is-hl td:first-child {
-  box-shadow: inset 2px 0 0 var(--violet-mid);
+  box-shadow: inset 2px 0 0 var(--gold-mid);
 }
 
 /* ---------- Spend slider --------------------------------------------------- */
@@ -517,7 +514,7 @@ h3.sub--first {
 
 .spend__volume {
   font: 500 1.05rem var(--mono);
-  color: var(--violet);
+  color: var(--gold);
   font-variant-numeric: tabular-nums;
 }
 
@@ -537,16 +534,16 @@ h3.sub--first {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: var(--violet);
+  background: var(--gold);
   border: 0;
-  box-shadow: 0 0 0 6px rgba(203, 188, 255, 0.12);
+  box-shadow: 0 0 0 4px var(--ground), 0 0 0 5px var(--gold);
 }
 
 .spend input[type="range"]::-moz-range-thumb {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: var(--violet);
+  background: var(--gold);
   border: 0;
 }
 
@@ -598,9 +595,8 @@ h3.sub--first {
 .facts dt,
 .swot dt {
   font: 12px/1.6 var(--mono);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink-3);
+  letter-spacing: 0.01em;
+    color: var(--ink-3);
 }
 
 .claims dd,
@@ -638,14 +634,13 @@ h3.sub--first {
 .note {
   max-width: 74ch;
   padding: 2px 0 2px 22px;
-  border-left: 1px solid var(--violet-deep);
+  border-left: 1px solid var(--gold-deep);
 }
 
 .note__label {
   font: 11px var(--mono);
   letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--violet);
+    color: var(--gold);
   margin-bottom: 8px;
 }
 
@@ -687,9 +682,8 @@ h3.sub--first {
 
 .design header span {
   font: 11.5px var(--mono);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink-4);
+  letter-spacing: 0.01em;
+    color: var(--ink-4);
 }
 
 .design dl {
@@ -701,9 +695,8 @@ h3.sub--first {
 
 .design dt {
   font: 12px/1.7 var(--mono);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--ink-3);
+  letter-spacing: 0.01em;
+    color: var(--ink-3);
 }
 
 .design dd {
@@ -792,9 +785,7 @@ h3.sub--first {
     z-index: 20;
     height: auto;
     padding: 14px 0 12px;
-    background: rgba(12, 12, 14, 0.92);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    background: var(--ground);
     border-bottom: 1px solid var(--rule);
     flex-direction: row;
     align-items: center;
@@ -836,21 +827,17 @@ h3.sub--first {
     display: none;
   }
 
-  .mast__figures {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .mast__figures > div:nth-child(3) {
-    padding-left: 0;
-    border-left: 0;
-  }
-
-  .mast__figures > div:nth-child(n + 3) {
-    margin-top: 28px;
+  .mast__figures > div {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 12ch);
+    row-gap: 6px;
   }
 
   .mast__figures dt {
-    min-height: 0;
+    grid-column: 1 / -1;
+  }
+
+  .mast__figures > div > .mast__sub {
+    grid-column: 1 / -1;
   }
 }
 
@@ -871,18 +858,10 @@ h3.sub--first {
     margin-top: 10px;
   }
 
-  .mast__figures {
+  .mast__figures > div {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .mast__figures > div,
-  .mast__figures > div + div {
-    padding-left: 0;
-    border-left: 0;
-  }
-
-  .mast__figures > div + div {
-    margin-top: 26px;
+    row-gap: 4px;
+    padding: 16px 0;
   }
 
   .sec__head {

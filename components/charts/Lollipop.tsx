@@ -7,7 +7,7 @@ import { linear } from "@/lib/scale";
 import { fonts, palette } from "@/lib/theme";
 
 const COLOR: Record<string, string> = {
-  lear: palette.violet,
+  lear: palette.gold,
   single: palette.silver,
   multi: palette.silverMid,
   ablation: palette.graphite,
@@ -40,7 +40,7 @@ export function Lollipop() {
         return (
           <g key={r.id}>
             <title>{`${r.label}: ${r.pct}%`}</title>
-            <text x={M.l - 22} y={y - 2} textAnchor="end" fontSize="14" fontWeight={600} fill={r.id === "lear" ? palette.violet : palette.ink}>
+            <text x={M.l - 22} y={y - 2} textAnchor="end" fontSize="14" fontWeight={600} fill={r.id === "lear" ? palette.gold : palette.ink}>
               {r.label}
             </text>
             <text x={M.l - 22} y={y + 16} textAnchor="end" fontSize="12" fill={palette.ink3}>
