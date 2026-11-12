@@ -9,15 +9,30 @@ the page.
 
 ## What's on the page
 
-- **Hero** with count-up key figures, and a reading-progress bar in the sticky nav.
-- **Eleven numbered sections** matching the PDF, with section navigation that
-  highlights the section you are reading.
+- **Masthead** with four headline figures, each one a number from the report.
+- **A sticky index rail** with eleven numbered sections matching the PDF. The
+  rail tracks reading progress and highlights the section in view. On narrow
+  screens it becomes a horizontal bar.
 - **Charts** (custom SVG, no chart library), each with:
   - entrance animations that play once as the chart scrolls into view,
-  - a data table or caption beside it, so no number exists only in the picture,
+  - a table or caption beside it, so no number exists only in the picture,
   - **SVG** and **PNG** (2x) export buttons.
 - **Monthly spend** chart with a volume slider (100 to 100,000 incidents/month).
-- Print stylesheet, reduced-motion support, keyboard focus styles, and a skip link.
+- Reduced-motion support, keyboard focus styles, and a skip link.
+
+Palette: charcoal ground, silver type, and one violet accent used only for Lear.
+Typography: a serif for titles and ledes, a sans for text, and a mono for numbers.
+
+## Layout
+
+```
+app/                 layout, page (section order), globals.css (all styles)
+components/chrome/   index rail, masthead
+components/charts/   SVG charts (forest, dumbbell, scatter, spend, lollipop, cause stack, ITBench)
+components/sections/ one file per report section
+components/ui/       figure frame, ledger table, note, section wrapper
+lib/                 data, theme tokens, scales, motion, formatting, export
+```
 
 ## Data
 
